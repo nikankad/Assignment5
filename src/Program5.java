@@ -11,7 +11,6 @@ public class Program5 {
     // make this a binary search tree
     BST tree = new BST();
     // code used to read the csv file and do whatever with it 
-    
     try (BufferedReader br = new BufferedReader(new FileReader("src/car_sales_data.csv"))) {
             String line;
             br.readLine(); // Skip the header row
@@ -22,13 +21,12 @@ public class Program5 {
                 final SaleRecord saleRecord = new SaleRecord(data[0], data[1], data[2], data[3], data[4],
                         Integer.parseInt(data[5]), Double.parseDouble(data[6]), Double.parseDouble(data[7]),
                         Double.parseDouble(data[8]));
+
                 tree.insert(saleRecord);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        System.out.println(tree.toString());
+        System.out.println(tree.findHeight());
   }
 }

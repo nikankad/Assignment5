@@ -32,6 +32,11 @@ class BST{
         return root;
     }
 
+    public int findHeight(){
+        int height = root.rightChildren;
+        return height;
+    }
+
     // // Utility function to search a key in a BST
     // Node search(Node root, int key) {
     //     // Base Cases: root is null or key is present at root
@@ -52,8 +57,8 @@ class BST{
             return "";
         }
     
-        result += root.left;
-        result += root.right;
+        result += root.left.toString();
+        result += root.right.toString();
         result += root.toString();
         return result.toString();
     }

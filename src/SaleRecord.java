@@ -13,7 +13,7 @@ public class SaleRecord {
     
     public SaleRecord(String date, String salePerson, String customerName, String carMake, String carModel, int carYear, double salePrice, double comissionRate, double comissionEarned){
     	this.date = date;
-        this.salesPerson = salesPerson;
+        this.salesPerson = salePerson;
         this.customerName = customerName;
         this.carMake = carMake;
         this.carModel = carModel;
@@ -49,5 +49,17 @@ public class SaleRecord {
     public String getMake() {
     	return carMake;
     }
-	
+    
+    public String getCustomerName() {
+    	return customerName;
+    }
+    
+    
+    @Override
+    public String toString() {
+        return date + ", " + salesPerson + ", " + customerName + ", " + carMake + ", " + carModel+ ", " +carYear+ ", " +salePrice+ ", " +comissionRate+ ", " +comissionEarned ;
+    }
+
+
+
 }
