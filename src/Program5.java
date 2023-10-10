@@ -27,6 +27,6 @@ public class Program5 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(tree.findHeight());
+        System.out.println(tree.findHeight(tree.root));
   }
 }

@@ -1,12 +1,15 @@
-class Node<E> {
+class Node {
 
     SaleRecord saleRecord;
-    public E item;
-    Node<E> left;
-    Node<E> right;
+
+
+    Node left;
+    Node right;
+
+    // totalChildren = leftChildren + rightChildren;
+    int totalChildren;
     int leftChildren;
     int rightChildren;
-    int totalChildren = leftChildren + rightChildren;
 
     public Node(SaleRecord saleRecord) {
         this.saleRecord = saleRecord;
@@ -14,7 +17,7 @@ class Node<E> {
         this.right = null;
         this.leftChildren = 0;
         this.rightChildren = 0;
-        this.totalChildren = this.rightChildren + this.leftChildren;
+        this.totalChildren = 1;
     }
 
 }
